@@ -113,7 +113,7 @@ class _DriveScreenState extends State<DriveScreen> {
 
   Future<void> timer() async {
     _timer =
-    new Timer.periodic(Duration(milliseconds: 500), (Timer t) => newData());
+    new Timer.periodic(Duration(milliseconds: 100), (Timer t) => newData());
   }
 
   @override
