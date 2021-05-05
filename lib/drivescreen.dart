@@ -8,7 +8,7 @@ import 'package:sensors/sensors.dart';
 
 class DataStorage {
   Future<String> get _localPath async {
-    final directory = await getApplicationDocumentsDirectory();
+    final directory = await getExternalStorageDirectory();
     return directory.path;
   }
 
@@ -113,7 +113,7 @@ class _DriveScreenState extends State<DriveScreen> {
 
   Future<void> timer() async {
     _timer =
-    new Timer.periodic(Duration(milliseconds: 750), (Timer t) => newData());
+    new Timer.periodic(Duration(milliseconds: 500), (Timer t) => newData());
   }
 
   @override

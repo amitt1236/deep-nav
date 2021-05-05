@@ -1,0 +1,122 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.space_reload_flutter"
+4    android:versionCode="1"
+5    android:versionName="1.0.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="16"
+8-->/Users/amitaflalo/diffrent/deep-nav/android/app/src/main/AndroidManifest.xml
+9        android:targetSdkVersion="29" />
+9-->/Users/amitaflalo/diffrent/deep-nav/android/app/src/main/AndroidManifest.xml
+10
+11    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+11-->/Users/amitaflalo/diffrent/deep-nav/android/app/src/main/AndroidManifest.xml:3:5-81
+11-->/Users/amitaflalo/diffrent/deep-nav/android/app/src/main/AndroidManifest.xml:3:22-78
+12    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+12-->[:location] /Users/amitaflalo/diffrent/deep-nav/build/location/intermediates/library_manifest/release/AndroidManifest.xml:7:5-81
+12-->[:location] /Users/amitaflalo/diffrent/deep-nav/build/location/intermediates/library_manifest/release/AndroidManifest.xml:7:22-78
+13    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+13-->[:location] /Users/amitaflalo/diffrent/deep-nav/build/location/intermediates/library_manifest/release/AndroidManifest.xml:8:5-79
+13-->[:location] /Users/amitaflalo/diffrent/deep-nav/build/location/intermediates/library_manifest/release/AndroidManifest.xml:8:22-76
+14
+15    <application
+15-->/Users/amitaflalo/diffrent/deep-nav/android/app/src/main/AndroidManifest.xml:4:5-41:19
+16        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+16-->[androidx.core:core:1.3.2] /Users/amitaflalo/.gradle/caches/transforms-2/files-2.1/acf999d338d007d1e88d450cb8e478ac/core-1.3.2/AndroidManifest.xml:24:18-86
+17        android:icon="@mipmap/ic_launcher"
+17-->/Users/amitaflalo/diffrent/deep-nav/android/app/src/main/AndroidManifest.xml:6:9-43
+18        android:label="space_reload_flutter" >
+18-->/Users/amitaflalo/diffrent/deep-nav/android/app/src/main/AndroidManifest.xml:5:9-45
+19        <activity
+19-->/Users/amitaflalo/diffrent/deep-nav/android/app/src/main/AndroidManifest.xml:7:9-35:20
+20            android:name="com.example.space_reload_flutter.MainActivity"
+20-->/Users/amitaflalo/diffrent/deep-nav/android/app/src/main/AndroidManifest.xml:8:13-41
+21            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
+21-->/Users/amitaflalo/diffrent/deep-nav/android/app/src/main/AndroidManifest.xml:11:13-163
+22            android:hardwareAccelerated="true"
+22-->/Users/amitaflalo/diffrent/deep-nav/android/app/src/main/AndroidManifest.xml:12:13-47
+23            android:launchMode="singleTop"
+23-->/Users/amitaflalo/diffrent/deep-nav/android/app/src/main/AndroidManifest.xml:9:13-43
+24            android:theme="@style/LaunchTheme"
+24-->/Users/amitaflalo/diffrent/deep-nav/android/app/src/main/AndroidManifest.xml:10:13-47
+25            android:windowSoftInputMode="adjustResize" >
+25-->/Users/amitaflalo/diffrent/deep-nav/android/app/src/main/AndroidManifest.xml:13:13-55
+26
+27            <!--
+28                 Specifies an Android theme to apply to this Activity as soon as
+29                 the Android process has started. This theme is visible to the user
+30                 while the Flutter UI initializes. After that, this theme continues
+31                 to determine the Window background behind the Flutter UI.
+32            -->
+33            <meta-data
+33-->/Users/amitaflalo/diffrent/deep-nav/android/app/src/main/AndroidManifest.xml:18:13-21:17
+34                android:name="io.flutter.embedding.android.NormalTheme"
+34-->/Users/amitaflalo/diffrent/deep-nav/android/app/src/main/AndroidManifest.xml:19:15-70
+35                android:resource="@style/NormalTheme" />
+35-->/Users/amitaflalo/diffrent/deep-nav/android/app/src/main/AndroidManifest.xml:20:15-52
+36            <!--
+37                 Displays an Android View that continues showing the launch screen
+38                 Drawable until Flutter paints its first frame, then this splash
+39                 screen fades out. A splash screen is useful to avoid any visual
+40                 gap between the end of Android's launch screen and the painting of
+41                 Flutter's first frame.
+42            -->
+43            <meta-data
+43-->/Users/amitaflalo/diffrent/deep-nav/android/app/src/main/AndroidManifest.xml:27:13-30:17
+44                android:name="io.flutter.embedding.android.SplashScreenDrawable"
+44-->/Users/amitaflalo/diffrent/deep-nav/android/app/src/main/AndroidManifest.xml:28:15-79
+45                android:resource="@drawable/launch_background" />
+45-->/Users/amitaflalo/diffrent/deep-nav/android/app/src/main/AndroidManifest.xml:29:15-61
+46
+47            <intent-filter>
+47-->/Users/amitaflalo/diffrent/deep-nav/android/app/src/main/AndroidManifest.xml:31:13-34:29
+48                <action android:name="android.intent.action.MAIN" />
+48-->/Users/amitaflalo/diffrent/deep-nav/android/app/src/main/AndroidManifest.xml:32:17-68
+48-->/Users/amitaflalo/diffrent/deep-nav/android/app/src/main/AndroidManifest.xml:32:25-66
+49
+50                <category android:name="android.intent.category.LAUNCHER" />
+50-->/Users/amitaflalo/diffrent/deep-nav/android/app/src/main/AndroidManifest.xml:33:17-76
+50-->/Users/amitaflalo/diffrent/deep-nav/android/app/src/main/AndroidManifest.xml:33:27-74
+51            </intent-filter>
+52        </activity>
+53        <!--
+54             Don't delete the meta-data below.
+55             This is used by the Flutter tool to generate GeneratedPluginRegistrant.java
+56        -->
+57        <meta-data
+57-->/Users/amitaflalo/diffrent/deep-nav/android/app/src/main/AndroidManifest.xml:38:9-40:33
+58            android:name="flutterEmbedding"
+58-->/Users/amitaflalo/diffrent/deep-nav/android/app/src/main/AndroidManifest.xml:39:13-44
+59            android:value="2" />
+59-->/Users/amitaflalo/diffrent/deep-nav/android/app/src/main/AndroidManifest.xml:40:13-30
+60
+61        <service
+61-->[:location] /Users/amitaflalo/diffrent/deep-nav/build/location/intermediates/library_manifest/release/AndroidManifest.xml:11:9-15:56
+62            android:name="com.lyokone.location.FlutterLocationService"
+62-->[:location] /Users/amitaflalo/diffrent/deep-nav/build/location/intermediates/library_manifest/release/AndroidManifest.xml:12:13-71
+63            android:enabled="true"
+63-->[:location] /Users/amitaflalo/diffrent/deep-nav/build/location/intermediates/library_manifest/release/AndroidManifest.xml:13:13-35
+64            android:exported="false"
+64-->[:location] /Users/amitaflalo/diffrent/deep-nav/build/location/intermediates/library_manifest/release/AndroidManifest.xml:14:13-37
+65            android:foregroundServiceType="location" />
+65-->[:location] /Users/amitaflalo/diffrent/deep-nav/build/location/intermediates/library_manifest/release/AndroidManifest.xml:15:13-53
+66
+67        <activity
+67-->[com.google.android.gms:play-services-base:16.0.1] /Users/amitaflalo/.gradle/caches/transforms-2/files-2.1/67f69ebea4fe135cc33cf1a0c2d462fa/jetified-play-services-base-16.0.1/AndroidManifest.xml:23:9-26:75
+68            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+68-->[com.google.android.gms:play-services-base:16.0.1] /Users/amitaflalo/.gradle/caches/transforms-2/files-2.1/67f69ebea4fe135cc33cf1a0c2d462fa/jetified-play-services-base-16.0.1/AndroidManifest.xml:24:13-79
+69            android:exported="false"
+69-->[com.google.android.gms:play-services-base:16.0.1] /Users/amitaflalo/.gradle/caches/transforms-2/files-2.1/67f69ebea4fe135cc33cf1a0c2d462fa/jetified-play-services-base-16.0.1/AndroidManifest.xml:25:13-37
+70            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+70-->[com.google.android.gms:play-services-base:16.0.1] /Users/amitaflalo/.gradle/caches/transforms-2/files-2.1/67f69ebea4fe135cc33cf1a0c2d462fa/jetified-play-services-base-16.0.1/AndroidManifest.xml:26:13-72
+71
+72        <meta-data
+72-->[com.google.android.gms:play-services-basement:16.0.1] /Users/amitaflalo/.gradle/caches/transforms-2/files-2.1/4b65b1f4c41ef97bad05a52d6a0e5a5b/jetified-play-services-basement-16.0.1/AndroidManifest.xml:23:9-25:69
+73            android:name="com.google.android.gms.version"
+73-->[com.google.android.gms:play-services-basement:16.0.1] /Users/amitaflalo/.gradle/caches/transforms-2/files-2.1/4b65b1f4c41ef97bad05a52d6a0e5a5b/jetified-play-services-basement-16.0.1/AndroidManifest.xml:24:13-58
+74            android:value="@integer/google_play_services_version" />
+74-->[com.google.android.gms:play-services-basement:16.0.1] /Users/amitaflalo/.gradle/caches/transforms-2/files-2.1/4b65b1f4c41ef97bad05a52d6a0e5a5b/jetified-play-services-basement-16.0.1/AndroidManifest.xml:25:13-66
+75    </application>
+76
+77</manifest>

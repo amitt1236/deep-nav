@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/amitaflalo/diffrent/different2.0/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-en-rGB/values-en-rGB.xml",
+            "outputFile": "/Users/amitaflalo/diffrent/deep-nav/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-en-rGB/values-en-rGB.xml",
             "map": [
                 {
                     "source": "/Users/amitaflalo/.gradle/caches/transforms-2/files-2.1/4b65b1f4c41ef97bad05a52d6a0e5a5b/jetified-play-services-basement-16.0.1/res/values-en-rGB/values.xml",

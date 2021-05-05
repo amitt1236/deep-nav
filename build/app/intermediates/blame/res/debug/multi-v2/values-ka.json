@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/amitaflalo/diffrent/different2.0/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-ka/values-ka.xml",
+            "outputFile": "/Users/amitaflalo/diffrent/deep-nav/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-ka/values-ka.xml",
             "map": [
                 {
                     "source": "/Users/amitaflalo/.gradle/caches/transforms-2/files-2.1/67f69ebea4fe135cc33cf1a0c2d462fa/jetified-play-services-base-16.0.1/res/values-ka/values.xml",
