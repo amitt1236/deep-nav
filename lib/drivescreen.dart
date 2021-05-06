@@ -23,6 +23,7 @@ class DataStorage {
     // Write the file
     return file.writeAsString(data, mode: FileMode.append);
   }
+
   Future<int> deleteFile() async {
     try {
       final file = await _localFile;
@@ -48,7 +49,7 @@ class _DriveScreenState extends State<DriveScreen> {
   String _accelerometerValues;
   String _gyroscopeValues;
   List<StreamSubscription<dynamic>> _streamSubscriptions =
-  <StreamSubscription<dynamic>>[];
+      <StreamSubscription<dynamic>>[];
 
   @override
   void initState() {
@@ -86,17 +87,17 @@ class _DriveScreenState extends State<DriveScreen> {
     location.requestPermission();
     _locationSubscription =
         location.onLocationChanged.handleError((dynamic err) {
-          setState(() {
-            _error = err.code;
-          });
-          _locationSubscription.cancel();
-        }).listen((LocationData currentLocation) {
-          setState(() {
-            _error = null;
-            _location = currentLocation;
-            _speed = _location.speed;
-          });
-        });
+      setState(() {
+        _error = err.code;
+      });
+      _locationSubscription.cancel();
+    }).listen((LocationData currentLocation) {
+      setState(() {
+        _error = null;
+        _location = currentLocation;
+        _speed = _location.speed;
+      });
+    });
   }
 
   Future<void> _stopListen() async {
@@ -107,13 +108,13 @@ class _DriveScreenState extends State<DriveScreen> {
     // Write the variable as a string to the file.
     if (_location != null && _error == null) {
       widget.data.writeData(
-          '${_location.longitude.toString() + "," + _location.latitude.toString() + "," + _accelerometerValues.toString() + "," + _gyroscopeValues.toString()} \n');
+          '${_location.latitude.toString() + "," + _location.longitude.toString() + "," + _accelerometerValues.toString() + "," + _gyroscopeValues.toString()} \n');
     }
   }
 
   Future<void> timer() async {
     _timer =
-    new Timer.periodic(Duration(milliseconds: 100), (Timer t) => newData());
+        new Timer.periodic(Duration(milliseconds: 100), (Timer t) => newData());
   }
 
   @override
