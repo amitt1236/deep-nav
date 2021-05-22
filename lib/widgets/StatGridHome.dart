@@ -2,6 +2,11 @@ import 'package:flutter/material.dart';
 
 class StatsGrid extends StatelessWidget {
   @override
+  final int distance;
+  final int how_many;
+
+  StatsGrid({this.distance, this.how_many});
+
   Widget build(BuildContext context) {
     return Container(
       height: MediaQuery.of(context).size.height * 0.25,
@@ -10,22 +15,14 @@ class StatsGrid extends StatelessWidget {
           Flexible(
             child: Row(
               children: <Widget>[
-                _mainStatCard('קילומטר', '105', Colors.red),
+                _mainStatCard('מרחק מצטבר', distance.toString(), Colors.pink),
               ],
             ),
           ),
           Flexible(
             child: Row(
               children: <Widget>[
-                _mainStatCard('קילומטר', '105', Colors.red),
-              ],
-            ),
-          ),
-          Flexible(
-            child: Row(
-              children: <Widget>[
-                _mainStatCard('נסיעות השבוע', '5', Colors.lightBlue),
-                _mainStatCard('מספר נסיעות', '50', Colors.purple),
+                _mainStatCard('מספר נסיעות', how_many.toString(), Colors.lightBlue),
               ],
             ),
           ),
@@ -53,7 +50,7 @@ class StatsGrid extends StatelessWidget {
                   title,
                   style: TextStyle(
                       color: Colors.white,
-                      fontSize: 15.0,
+                      fontSize: 25.0,
                       fontWeight: FontWeight.bold),
                 ),
               ],
@@ -65,7 +62,7 @@ class StatsGrid extends StatelessWidget {
                   count,
                   style: TextStyle(
                       color: Colors.white,
-                      fontSize: 30.0,
+                      fontSize: 40.0,
                       fontWeight: FontWeight.bold),
                 ),
               ],

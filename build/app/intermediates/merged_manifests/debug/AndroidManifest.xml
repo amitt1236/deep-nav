@@ -19,8 +19,8 @@
     <application
         android:appComponentFactory="androidx.core.app.CoreComponentFactory"
         android:debuggable="true"
-        android:icon="@mipmap/ic_launcher"
-        android:label="space_reload_flutter" >
+        android:icon="@mipmap/launcher_icon"
+        android:label="deep nav" >
         <activity
             android:name="com.example.space_reload_flutter.MainActivity"
             android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
@@ -68,6 +68,21 @@
             android:enabled="true"
             android:exported="false"
             android:foregroundServiceType="location" />
+
+        <activity
+            android:name="io.flutter.plugins.urllauncher.WebViewActivity"
+            android:exported="false"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+
+        <provider
+            android:name="com.dataxad.flutter_mailer.FlutterMailerFileProvider"
+            android:authorities="com.example.space_reload_flutter.adv_provider"
+            android:exported="false"
+            android:grantUriPermissions="true" >
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/flutter_mailer_paths" />
+        </provider>
 
         <activity
             android:name="com.google.android.gms.common.api.GoogleApiActivity"

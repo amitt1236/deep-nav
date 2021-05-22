@@ -1,18 +1,21 @@
 android.content.res.Resources#getIdentifier present: true
-Web content present: false
+Web content present: true
 Referenced Strings:
   $
   $GPGGA
   %s
   %s.%sParcelizer
+  .adv_provider
   0
   0x%08x
+  :memory:
   A::
   ACCESSIBLE_NAVIGATION
   ACTION_ARGUMENT_EXTEND_SELECTION_BOOLEAN
   ACTION_ARGUMENT_MOVEMENT_GRANULARITY_INT
   ACTION_ARGUMENT_SELECTION_END_INT
   ACTION_ARGUMENT_SELECTION_START_INT
+  ACTIVITY_NOT_FOUND
   ADD
   ALERT
   API_NOT_CONNECTED
@@ -27,6 +30,7 @@ Referenced Strings:
   AppLifecycleState.inactive
   AppLifecycleState.paused
   AppLifecycleState.resumed
+  Attachments_null
   AudioAttributesCompat:
   BITMAP
   BITMAP_MASKABLE
@@ -80,6 +84,7 @@ Referenced Strings:
   DialogRedirect
   EMAIL_ADDRESS
   ERROR
+  FLUTTER_MAILER
   FRAMEWORK_CLIENT
   FlutterActivity
   FlutterActivityAndFragmentDelegate
@@ -191,6 +196,7 @@ Referenced Strings:
   NewApi
   NotificationCompat
   O:
+  OK
   ON_ANY
   ON_CREATE
   ON_DESTROY
@@ -264,6 +270,7 @@ Referenced Strings:
   SignIn.INTERNAL_API
   SignInClientImpl
   SignInCoordinator
+  Sqflite
   StreamHandlerImpl
   SupportLifecycleFragmentImpl
   SystemChannel
@@ -355,6 +362,8 @@ Referenced Strings:
   UTF8
   UnknownNullness
   UntrackedBindService
+  UrlLauncherPlugin
+  UseSparseArrays
   V:
   VISIBLE_PASSWORD
   ViewCompat
@@ -363,6 +372,8 @@ Referenced Strings:
   ZZZ
   _
   _LifecycleAdapter
+  _display_name
+  _size
   a
   accessibility
   accuracy
@@ -388,7 +399,15 @@ Referenced Strings:
   android.hardware.type.watch
   android.intent.action.PACKAGE_ADDED
   android.intent.action.RUN
+  android.intent.action.SENDTO
+  android.intent.action.SEND_MULTIPLE
   android.intent.action.VIEW
+  android.intent.extra.BCC
+  android.intent.extra.CC
+  android.intent.extra.EMAIL
+  android.intent.extra.STREAM
+  android.intent.extra.SUBJECT
+  android.intent.extra.TEXT
   android.media.metadata.ADVERTISEMENT
   android.media.metadata.ALBUM
   android.media.metadata.ALBUM_ART
@@ -424,6 +443,7 @@ Referenced Strings:
   android.permission.ACCESS_BACKGROUND_...
   android.permission.ACCESS_FINE_LOCATION
   android.settings.APPLICATION_DETAILS_...
+  android.support.FILE_PROVIDER_PATHS
   android.support.action.semanticAction
   android.support.action.showsUserInter...
   android.support.actionExtras
@@ -467,6 +487,7 @@ Referenced Strings:
   android:theme
   android:user_visible_hint
   android:view_state
+  androidThreadPriority
   androidx.lifecycle.BundlableSavedStat...
   androidx.lifecycle.LifecycleDispatche...
   androidx.lifecycle.ViewModelProvider....
@@ -474,15 +495,21 @@ Referenced Strings:
   androidx.transition.FragmentTransitio...
   anim
   announce
+  appSchema
   arch_disk_io_%d
   args
+  arguments
+  attachments
   autocorrect
   autofill
   b
   background
   background_mode
+  bad_param
   base
   basic
+  batch
+  bccRecipients
   birthDateDay
   birthDateFull
   birthDateMonth
@@ -491,9 +518,12 @@ Referenced Strings:
   birthdayDay
   birthdayMonth
   birthdayYear
+  body
   c
   cached_engine_id
+  canLaunch
   cancel
+  ccRecipients
   cell
   changeSettings
   character
@@ -505,8 +535,14 @@ Referenced Strings:
   click
   client_name
   clipboard
+  closeDatabase
+  closeWebView
+  cmd
   cn.google
+  code
   codePoint
+  columns
+  com.android.browser.headers
   com.android.vending
   com.google
   com.google.android.clockwork.home.UPD...
@@ -544,6 +580,7 @@ Referenced Strings:
   com.google.android.wearable.app
   com.google.app.id
   com.google.common.base.Strings
+  com.tekartik.sqflite
   common_google_play_services_api_unava...
   common_google_play_services_invalid_a...
   common_google_play_services_invalid_a...
@@ -559,6 +596,7 @@ Referenced Strings:
   composingExtent
   content
   contextMenu
+  continueOnError
   copy
   countryName
   create
@@ -571,9 +609,13 @@ Referenced Strings:
   d
   dark
   data
+  databases
+  debug
+  debugMode
   decimal
   defaultGoogleSignInAccount
   default_input_method
+  deleteDatabase
   destroy_engine_with_activity
   deviceId
   direction
@@ -587,11 +629,14 @@ Referenced Strings:
   emailAddress
   enable
   enableBackgroundMode
+  enableDomStorage
+  enableJavaScript
   enableSuggestions
   enable_state_restoration
   enabled
   error
   error_code
+  execute
   expirationTime
   extendedAddress
   extendedPostalCode
@@ -626,6 +671,7 @@ Referenced Strings:
   flutter_assets
   flutter_deeplinking_enabled
   flutter_location_channel_01
+  flutter_mailer
   forbidden
   fragment
   framework
@@ -636,6 +682,7 @@ Referenced Strings:
   getApplicationDocumentsDirectory
   getApplicationSupportDirectory
   getChildId
+  getDatabasesPath
   getDeferredComponentInstallState
   getExternalCacheDirectories
   getExternalStorageDirectories
@@ -643,6 +690,7 @@ Referenced Strings:
   getJavaLangAccess
   getLocation
   getParentNodeId
+  getPlatformVersion
   getResId
   getResPackage
   getSourceNodeId
@@ -661,6 +709,7 @@ Referenced Strings:
   guava.concurrent.generate_cancellatio...
   handled
   hasPermission
+  headers
   heading
   height
   help
@@ -670,10 +719,12 @@ Referenced Strings:
   icon
   id
   image
+  inTransaction
   includeSubdomains
   inputAction
   inputType
   input_method
+  insert
   installDeferredComponent
   interval
   invisible_actions
@@ -684,7 +735,9 @@ Referenced Strings:
   io.flutter.embedding.android.OldGenHe...
   io.flutter.embedding.android.SplashSc...
   io.flutter.plugins.GeneratedPluginReg...
+  isAppInstalled
   isBackgroundModeEnabled
+  isHTML
   java.
   key
   keyCode
@@ -694,6 +747,7 @@ Referenced Strings:
   kind
   label
   latitude
+  launch
   layout_inflater
   libapp.so
   libflutter.so
@@ -702,6 +756,7 @@ Referenced Strings:
   loadingUnitId
   location
   locationServices
+  logLevel
   longPress
   longitude
   lyokone/location
@@ -713,11 +768,13 @@ Referenced Strings:
   mNextServedView
   mOnKeyListener
   mServedView
+  mailto:
   main
   market://details
   media_item
   memoryPressure
   message
+  message/rfc822
   metaState
   method
   middleInitial
@@ -733,8 +790,10 @@ Referenced Strings:
   newPassword
   newUsername
   noDrop
+  noResult
   nodeId
   none
+  not_available
   notification
   notify_manager
   null
@@ -755,10 +814,14 @@ Referenced Strings:
   onUserLeaveHint
   oneTimeCode
   opaque
+  openDatabase
+  operations
+  options
   overlay
   package
   params
   password
+  path
   pcampaignid
   pendingIntent
   pending_intent
@@ -781,6 +844,7 @@ Referenced Strings:
   plugins.flutter.io/sensors/accelerometer
   plugins.flutter.io/sensors/gyroscope
   plugins.flutter.io/sensors/user_accel
+  plugins.flutter.io/url_launcher
   popRoute
   postalAddress
   postalAddressExtended
@@ -793,7 +857,14 @@ Referenced Strings:
   push
   pushRoute
   put
+  query
+  queryAsMapList
+  r
   read
+  readOnly
+  recipients
+  recovered
+  recoveredInTransaction
   registerWith
   remoteInputs
   removeObserver
@@ -819,13 +890,18 @@ Referenced Strings:
   resolution
   resolving_error
   restricted_profile
+  result
   route
+  rows
+  rw
+  rwt
   samsung
   scanCode
   search_results
   selectionBase
   selectionExtent
   semanticAction
+  send
   sensor
   serverAuthCode
   serviceEnabled
@@ -838,15 +914,19 @@ Referenced Strings:
   showsUserInterface
   signed
   silent
+  singleInstance
   smsOTPCode
   source
   speed
   speed_accuracy
+  sql
+  sqlite_error
   statusBarColor
   statusBarIconBrightness
   statusCode
   streetAddress
   string
+  subject
   sun.misc.JavaLangAccess
   sun.misc.SharedSecrets
   surface
@@ -854,6 +934,7 @@ Referenced Strings:
   systemNavigationBarDividerColor
   systemNavigationBarIconBrightness
   tap
+  tekartik_sqflite.db
   telephoneNumber
   telephoneNumberCountryCode
   telephoneNumberDevice
@@ -877,7 +958,10 @@ Referenced Strings:
   uniqueIdentifier
   unknown
   unrated
+  update
   updateViewLayout
+  url
+  useWebView
   user
   username
   value
@@ -886,10 +970,13 @@ Referenced Strings:
   verticalText
   viewFocused
   viewType
+  w
+  wa
   wait
   width
   window
   write
+  wt
   x
   zoomIn
   zoomOut
@@ -928,6 +1015,7 @@ Marking id:accessibility_custom_action_6:2131034141 used because its prefix matc
 Marking id:accessibility_custom_action_7:2131034142 used because its prefix matches string pool constant accessibility
 Marking id:accessibility_custom_action_8:2131034143 used because its prefix matches string pool constant accessibility
 Marking id:accessibility_custom_action_9:2131034144 used because its prefix matches string pool constant accessibility
+Marking xml:flutter_mailer_paths:2131492864 used because its prefix matches string pool constant flutter
 Marking color:androidx_core_ripple_material_light:2130837504 used because its prefix matches string pool constant android
 Marking color:androidx_core_secondary_text_default_material_light:2130837505 used because its prefix matches string pool constant android
 Marking attr:android_colorBackground:-1 used because its prefix matches string pool constant android
@@ -952,6 +1040,7 @@ Marking attr:android_endX:-1 used because its prefix matches string pool constan
 Marking attr:android_endY:-1 used because its prefix matches string pool constant android
 Marking attr:android_tileMode:-1 used because its prefix matches string pool constant android
 Marking attr:android_offset:-1 used because its prefix matches string pool constant android
+Marking xml:flutter_mailer_paths:2131492864 used because its prefix matches string pool constant flutter_mailer
 Marking id:time:2131034204 used because its prefix matches string pool constant time
 Marking id:light:2131034179 used because its prefix matches string pool constant light
 Marking color:notification_action_color_filter:2130837517 used because its prefix matches string pool constant notification
@@ -1017,6 +1106,8 @@ Marking id:actions:2131034150 used because its prefix matches string pool consta
 Marking id:text:2131034202 used because its prefix matches string pool constant text
 Marking id:text2:2131034203 used because its prefix matches string pool constant text
 Marking attr:keylines:2130771985 used because its prefix matches string pool constant key
+Marking drawable:launch_background:2130968597 used because its prefix matches string pool constant launch
+Marking mipmap:launcher_icon:2131230721 used because its prefix matches string pool constant launch
 Marking id:none:2131034183 used because its prefix matches string pool constant none
 Marking id:dark:2131034165 used because its prefix matches string pool constant dark
 Resource Reference Graph:
@@ -1181,7 +1272,7 @@ attr:imageAspectRatio:2130771983,
    layout:notification_template_media_custom:2131165197,
    layout:notification_template_part_chronometer:2131165198,
    layout:notification_template_part_time:2131165199,
-   mipmap:ic_launcher:2131230720,
+   mipmap:launcher_icon:2131230721,
    string:common_google_play_services_enable_button:2131296256,
    string:common_google_play_services_enable_text:2131296257,
    string:common_google_play_services_enable_title:2131296258,
@@ -1201,6 +1292,7 @@ attr:imageAspectRatio:2130771983,
    string:notification_title:2131296274,
    style:LaunchTheme:2131361792,
    style:NormalTheme:2131361793,
+   xml:flutter_mailer_paths:2131492864,
    attr:android_colorBackground:-1,
    attr:android_color:-1,
    attr:android_alpha:-1,
@@ -1265,3 +1357,8 @@ Skipped unused resource res/drawable-xxhdpi-v4/common_google_signin_btn_text_lig
 Skipped unused resource res/drawable-xxhdpi-v4/googleg_disabled_color_18.png: 727 bytes (replaced with small dummy file of size 67 bytes)
 Skipped unused resource res/drawable-xxhdpi-v4/googleg_standard_color_18.png: 1615 bytes (replaced with small dummy file of size 67 bytes)
 Skipped unused resource res/layout/custom_dialog.xml: -1 bytes (replaced with small dummy file of size 104 bytes)
+Skipped unused resource res/mipmap-mdpi-v4/ic_launcher.png: 405 bytes (replaced with small dummy file of size 67 bytes)
+Skipped unused resource res/mipmap-hdpi-v4/ic_launcher.png: 507 bytes (replaced with small dummy file of size 67 bytes)
+Skipped unused resource res/mipmap-xhdpi-v4/ic_launcher.png: 684 bytes (replaced with small dummy file of size 67 bytes)
+Skipped unused resource res/mipmap-xxhdpi-v4/ic_launcher.png: 994 bytes (replaced with small dummy file of size 67 bytes)
+Skipped unused resource res/mipmap-xxxhdpi-v4/ic_launcher.png: 1406 bytes (replaced with small dummy file of size 67 bytes)

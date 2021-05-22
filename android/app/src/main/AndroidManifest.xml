@@ -2,8 +2,8 @@
     package="com.example.space_reload_flutter">
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <application
-        android:label="space_reload_flutter"
-        android:icon="@mipmap/ic_launcher">
+        android:label="deep nav"
+        android:icon="@mipmap/launcher_icon">
         <activity
             android:name=".MainActivity"
             android:launchMode="singleTop"

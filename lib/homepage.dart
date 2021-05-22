@@ -1,3 +1,4 @@
+import 'package:different/db/db.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -5,6 +6,8 @@ import 'package:rive/rive.dart';
 import 'package:different/refresh_controller.dart';
 import 'package:different/widgets/StatGridHome.dart';
 import 'package:different/drivescreen.dart';
+
+import 'db/drive_db.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -14,12 +17,15 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   Artboard _artboard;
   RefreshController _controller;
+  List<Drive> drives;
 
   @override
   void initState() {
-    _loadRiveFile();
     super.initState();
+    _loadRiveFile();
+    data();
   }
+
 
   /// Loads a Rive file
   void _loadRiveFile() async {
@@ -49,12 +55,23 @@ class _HomePageState extends State<HomePage> {
             alignment: Alignment.bottomCenter)
         : Container();
   }
+  int count = 0;
+  int distance = 0;
+
+  void data() async{
+    this.drives = await DatabaseHandler().Drives();
+    distance =  this.drives.isEmpty ? 0 : this.drives[0].distance;
+    count = this.drives.isEmpty ? 0 : this.drives[0].how_many;
+    setState(() {
+    });
+  }
+
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar:
-          AppBar(title: Text('LyftOff'), backgroundColor: Color(0xFF282828)),
+          AppBar(title: Text('LyftOff'), backgroundColor: Color(0xFF282828),centerTitle: true,),
       backgroundColor: Color(0xFF333333),
       body: NotificationListener<ScrollNotification>(
         onNotification: (notification) {
@@ -71,6 +88,7 @@ class _HomePageState extends State<HomePage> {
               refreshIndicatorExtent: 240.0,
               builder: buildRefreshWidget,
               onRefresh: () {
+                data();
                 return Future<void>.delayed(const Duration(seconds: 5))
                   ..then<void>((_) {
                     if (mounted) {
@@ -81,8 +99,11 @@ class _HomePageState extends State<HomePage> {
             ),
             SliverToBoxAdapter(
                 child: SizedBox(
-              height: 400,
-              child: StatsGrid(),
+              height: 350,
+              child: StatsGrid(
+                  distance: distance,
+                  how_many: count,
+              ),
             )),
             SliverSafeArea(
               top: false, // Top safe area is consumed by the navigation bar.
@@ -106,20 +127,21 @@ class _HomePageState extends State<HomePage> {
         ),
       ),
       floatingActionButton: SizedBox(
-        height: 60.0,
-        width: 185.0,
+        height: 66.0,
+        width: 190.0,
         child: FloatingActionButton.extended(
           onPressed: () {
             Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => new DriveScreen(data: DataStorage())),
-            );
+              MaterialPageRoute(builder: (context) => new DriveScreen(data: DataStorage()))).then((value) => setState((){data();}));
           },
           backgroundColor: Colors.green,
           label: Text(
             'התחל נסיעה',
             style: TextStyle(
-              fontSize: 20.0,
+              fontSize: 22.0,
+                fontWeight: FontWeight.w700
+
             ),
           ),
           icon: Icon(

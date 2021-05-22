@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class StatsGrid extends StatelessWidget {
   @override
-  final int distance;
+  final String distance;
   final int speed;
   final String time;
 
@@ -16,7 +16,7 @@ class StatsGrid extends StatelessWidget {
           Flexible(
             child: Row(
               children: <Widget>[
-                _mainStatCard('מרחק', distance.toString(), Colors.red),
+                _mainStatCard('מרחק', distance, Colors.pink),
               ],
             ),
           ),
@@ -24,7 +24,7 @@ class StatsGrid extends StatelessWidget {
             child: Row(
               children: <Widget>[
                 _mainStatCard(' זמן', time, Colors.lightBlue),
-                _mainStatCard('מהירות נסיעה', speed.toString(), Colors.purple),
+                _mainStatCard('מהירות נסיעה', speed.toString(), Colors.indigo),
               ],
             ),
           ),
@@ -52,7 +52,7 @@ class StatsGrid extends StatelessWidget {
                   title,
                   style: TextStyle(
                       color: Colors.white,
-                      fontSize: 20.0,
+                      fontSize: 25.0,
                       fontWeight: FontWeight.bold),
                 ),
               ],
@@ -64,7 +64,7 @@ class StatsGrid extends StatelessWidget {
                   count,
                   style: TextStyle(
                       color: Colors.white,
-                      fontSize: 10.0,
+                      fontSize: 30.0,
                       fontWeight: FontWeight.bold),
                 ),
               ],
