@@ -1,6 +1,6 @@
 # Deep nav
 
-An app for collecting gps, accelerometer and gyroscope data from a smartphone mounted  on a stand while driving a car.   
+An app for collecting gps, accelerometer and gyroscope data from a smartphone mounted  on a stand while driving a car.
 The data is sampeled at 50HZ.
 
 The data is used in a Deep learning project. the project goal is to regress a vehicle acceleration
