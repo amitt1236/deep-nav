@@ -13,6 +13,5 @@ The end goal is to create a basic inertial navigation system.
 </p>
 
 # data pipeline 
-The data is collected on the phone and when the drive is over is sent by email to a pre Defined email.  
-an email crawler using python grabs all the data from the detected email and saves it.
-a python scipt extracts and organize all the relevant data.
+[I'm an inline-style link]https://github.com/amitt1236/deepnav_model)
+
