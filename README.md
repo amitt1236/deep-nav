@@ -13,5 +13,5 @@ The end goal is to create a basic inertial navigation system.
 </p>
 
 # data pipeline 
-[I'm an inline-style link]https://github.com/amitt1236/deepnav_model)
+https://github.com/amitt1236/deepnav_model
 
