@@ -11,3 +11,8 @@ The end goal is to create a basic inertial navigation system.
 <img src="./main.jpg" width=30% height=30%>
 <img src="./drive.jpg" width=30% height=30%>
 </p>
+
+# data pipeline 
+The data is collected on the phone and when the drive is over is sent by email to a pre Defined email.  
+an email crawler using python grabs all the data from the detected email and saves it.
+a python scipt extracts and organize all the relevant data.
